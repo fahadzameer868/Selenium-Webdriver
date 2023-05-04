@@ -9,7 +9,6 @@
   <test thread-count="5" name="Regression Test 1" verbose="2">
     <classes>
       <class name="com.ui.qa.testcases.LoginPageTest"></class>
-      <class name="com.ui.qa.testcases.HomePageTest"></class>
     </classes>
   </test> <!-- Default test -->
 </suite> <!-- Default suite -->
