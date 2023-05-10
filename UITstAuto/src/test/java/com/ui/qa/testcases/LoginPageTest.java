@@ -36,8 +36,9 @@ public class LoginPageTest extends TestBase{
 	@Test(dataProvider="getData", priority=1)
 	public void loginTest(String username, String password) {
 		//loginpage.testExplicitWait();
+		System.out.println(System.getProperty("user.dir"));
 		String title = loginpage.validateLoginPageHeader();
-		Assert.assertEquals(title,"Swag Labss");
+		Assert.assertEquals(title,"Swag Labs");
 		loginpage.login(username, password);
 	}
 	
