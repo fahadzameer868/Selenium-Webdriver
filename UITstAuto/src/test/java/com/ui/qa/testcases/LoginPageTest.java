@@ -29,7 +29,7 @@ public class LoginPageTest extends TestBase{
 	
 	@DataProvider
 	public Object[][] getData() throws IOException{
-		Object[][] data = ExcelDataReaderUtil.readExcelData(prop.getProperty("file_path"), prop.getProperty("sheet_name"));
+		Object[][] data = ExcelDataReaderUtil.readExcelData(System.getProperty("user.dir")+prop.getProperty("file_path"), prop.getProperty("sheet_name"));
 		return data;
 	}
 	

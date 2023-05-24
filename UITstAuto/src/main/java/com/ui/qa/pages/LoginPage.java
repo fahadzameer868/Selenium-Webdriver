@@ -37,11 +37,11 @@ public class LoginPage{
 		wait.until(ExpectedConditions.visibilityOf(pageheader1));
 	}
 	
-	public HomePage login(String username, String password) {
+	public InventoryPage login(String username, String password) {
 		this.username.sendKeys(username);
 		this.password.sendKeys(password);
 		submitbutton.click();
-		return new HomePage(driver);
+		return new InventoryPage(driver);
 	}
 
 }

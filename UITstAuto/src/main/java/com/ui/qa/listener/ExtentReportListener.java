@@ -26,7 +26,7 @@ public class ExtentReportListener implements IReporter{
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
 		// TODO Auto-generated method stub
 		extent = new ExtentReports();
-		spark = new ExtentSparkReporter("C:\\Users\\Fahad.Zameer\\eclipse-workspace\\UITstAuto\\test-output\\extent-report.html");
+		spark = new ExtentSparkReporter(System.getProperty("user.dir")+"\\test-output\\extent-report.html");
 		extent.attachReporter(spark);
 		
 		for (ISuite suite : suites) {

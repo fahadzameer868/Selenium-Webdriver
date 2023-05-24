@@ -30,7 +30,7 @@ public class TestBase {
 		prop = new Properties();
 		log = LogManager.getLogger();
 		try {
-			FileInputStream fis = new FileInputStream("C:\\Users\\Fahad.Zameer\\eclipse-workspace\\UITstAuto\\src\\main\\java\\com\\ui\\qa\\config\\config.properties");
+			FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\com\\ui\\qa\\config\\config.properties");
 			prop.load(fis);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
