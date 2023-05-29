@@ -26,19 +26,15 @@ public class InventoryPageTest extends TestBase{
 	}
 	
 	@Test(priority=1)
-	public void validateInventoryPageHeader() {
-		String hp_text = inventorypage.validateInventoryPageHeader();
+	public void addProductsToCart() {
+		String hp_text = inventorypage.getInventoryPageHeader();
 		softassert = new SoftAssert();
-		softassert.assertEquals(hp_text, "Swag Labs");
+		softassert.assertEquals(hp_text, "Products");
+		inventorypage.addAllItemsToCart();
+		inventorypage.clickOnCartButton();
 		softassert.assertAll();
 	}
-	
-	@Test(priority=2)
-	public void addAllItemsToCart() throws InterruptedException {
-		inventorypage.addAllItemsToCart();
-		Thread.sleep(5);
-	}
-	
+		
 	@AfterMethod
 	public void tearDown() {
 		driver.quit();

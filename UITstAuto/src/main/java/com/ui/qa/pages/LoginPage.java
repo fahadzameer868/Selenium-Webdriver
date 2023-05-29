@@ -28,7 +28,7 @@ public class LoginPage{
 	}
 	
 	// performing actions on web elements
-	public String validateLoginPageHeader() {
+	public String getLoginPageHeader() {
 		return pageheader.getText();
 	}
 	

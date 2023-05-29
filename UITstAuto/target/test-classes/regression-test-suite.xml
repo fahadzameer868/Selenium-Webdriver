@@ -10,6 +10,7 @@
       <classes>
         <class name="com.ui.qa.testcases.LoginPageTest"/>
         <class name="com.ui.qa.testcases.InventoryPageTest"/>
+        <class name="com.ui.qa.testcases.CartPageTest"/>
       </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

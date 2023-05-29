@@ -10,23 +10,32 @@ import org.openqa.selenium.support.PageFactory;
 
 public class InventoryPage{
 	
+	WebDriver driver;
+	
 	// locating page objects
-	@FindBy(xpath="//div[text()='Swag Labs']") WebElement hp_header;
+	@FindBy(xpath="//span[@class='title']") WebElement page_title;
 	@FindBy(xpath="//button[contains(@class,'btn_inventory')]") List<WebElement> add_to_cart_btns;
+	@FindBy(xpath="//a[@class='shopping_cart_link']") WebElement main_cart_btn;
 	
 	// initializing web elements
 	public InventoryPage(WebDriver driver) {
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
 	// performing actions on web elements
-	public String validateInventoryPageHeader() {
-		return hp_header.getText();
+	public String getInventoryPageHeader() {
+		return page_title.getText();
 	}
 	
 	public void addAllItemsToCart() {
 		for(WebElement btn : add_to_cart_btns) {
 			btn.click();
 		}
+	}
+	
+	public CartPage clickOnCartButton() {
+		main_cart_btn.click();
+		return new CartPage(driver);
 	}
 }
