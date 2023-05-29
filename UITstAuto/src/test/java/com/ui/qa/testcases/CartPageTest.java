@@ -31,7 +31,7 @@ public class CartPageTest extends TestBase{
 	public void cartCheckout() {
 		softassert = new SoftAssert();
 		String title = cartpage.getCartPageHeaderText();
-		softassert.assertEquals(title, "Your Carrt");
+		softassert.assertEquals(title, "Your Cart");
 		log.info("verify page title, Expected value: Your Cart && Actual Value: "+ title);
 		cartpage.clickOnCheckoutBtn();
 		softassert.assertAll();
